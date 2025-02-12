@@ -5,6 +5,6 @@ ALL_JSON = "/api/v2/"
 
 def get_links():
     response = get(BASE_URL+ALL_JSON).json()
-    return response
+    return list(response.values())
 
 print(get_links())
